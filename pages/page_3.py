@@ -1,12 +1,18 @@
 import streamlit as st
 import pandas as pd
+from io import StringIO
 
 st.markdown("# Use_Case 2: CPF Grant Calculator")
 st.sidebar.markdown("# Use_Case 2: CPF Grant Calculator")
 
 st.markdown ('# CPF Housing Grant for Resale Flats (Families)')
 # Read the CSV file
-df_1 = pd.read_csv ('/workspaces/streamlit_appdesign/pages/CPF grant.csv')
+data ="""Household,2-to 4-room,5-room or bigger,
+First timer SC-SC couples,"80,000 ","50,000",
+First-timer SC-SPR couples,"70,000 ","40,000 ",
+First- and second-timer SC-SC couples,"40,000 ","25,000 ","""
+df = pd.read_csv(StringIO(data))
+
 # Select box from df_1 > household 
 household = st.selectbox('Household Type:', df_1['Household'])
 # Select box from df_1 > flat type 
@@ -25,7 +31,25 @@ st.write('Grant Amount ($):', grant_1)
 
 st.markdown ('# Enhanced CPF Housing Grant (Families)')
 #Read the CSV file 
-df_2 = pd.read_csv ('/workspaces/streamlit_appdesign/pages/EHG.csv')
+data ="""Families Income Ceiling,CPF grant amount,
+"Not more than $1,500","120,000 ",
+"$1,501 to $2,000","110,000 ",
+"$2,001 to $2,500","105,000",
+"$2,501 to $3,000","95,000 ",
+"$3,001 to $3,500","90,000 ",
+"$3,501 to $4,000","80,000 ",
+"$4,001 to $4,500","70,000 ",
+"$4,501 to $5,000","65,000 ",
+"$5,001 to $5,500","55,000 ",
+"$5,501 to $6,000","50,000 ",
+"$6,001 to $6,500","40,000 ",
+"$6,501 to $7,000","30,000 ",
+"$7,001 to $7,500","25,000 ",
+"$7,501 to $8,000","20,000 ",
+"$8,001 to $8,500","10,000 ",
+"$8,501 to $9,000","5,000 ","""
+df = pd.read_csv(StringIO(data))
+
 # Select box from df_2 > income
 Income_ceiling = st.selectbox('Families Income Ceiling:', df_2['Families Income Ceiling'])
 # Retrieve the enhance grant 
