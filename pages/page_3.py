@@ -68,8 +68,3 @@ st.write('Grant Amount($):' ,grant_2)
 Total_grant = grant_1 + grant_2 
 
 st.write('Total Grant Amount ($):', Total_grant)
-
-
-# Create a histogram using Streamlit's built-in charting functionality
-st.markdown('# Histogram of CPF Grant Amounts')
-st.bar_chart(df_1['Household'])
