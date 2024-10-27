@@ -64,7 +64,7 @@ price
 # Create a DataFrame for charting
 chart_data = pd.DataFrame({
     'Flat Type': room_options,
-    'Price': prices_numeric
+    'Price': price
 })
 
 # Display the bar chart
