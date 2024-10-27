@@ -13,17 +13,5 @@ Furthermore, please be aware that the LLM may generate inaccurate or incorrect i
 Always consult with qualified professionals for accurate and personalized advice.
     """)
 
-# Define the password
-PASSWORD = "1234"
 
-# Create a password input field
-password = st.text_input("Enter Password:", type="password")
-
-# Check if the password is correct
-if password == PASSWORD:
-    st.title("Protected Streamlit App")
-    st.write("Welcome to the app!")
-    
-    # Add your app content here
-    # Example: Display a table, charts, etc.
     
