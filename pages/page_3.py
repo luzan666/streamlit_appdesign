@@ -32,7 +32,7 @@ st.write('Grant Amount ($):', grant_1)
 
 st.markdown ('# Enhanced CPF Housing Grant (Families)')
 #Read the CSV file 
-data_2 = """ Families Income Ceiling,CPF grant amount,
+data_2 = """Families Income Ceiling,CPF grant amount,
 "Not more than $1,500","120,000 ",
 "$1,501 to $2,000","110,000 ",
 "$2,001 to $2,500","105,000",
