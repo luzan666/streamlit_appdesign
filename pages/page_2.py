@@ -60,4 +60,4 @@ price = df.loc[df['Town'] == town_option, room_option].values[0]
 # Display the result
 price
 
-st.dataframe(data)
+st.dataframe(df)
