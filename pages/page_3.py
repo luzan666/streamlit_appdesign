@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from io import StringIO
+import matplotlib.pyplot as plt
 
 st.markdown("# Use_Case 2: CPF Grant Calculator")
 st.sidebar.markdown("# Use_Case 2: CPF Grant Calculator")
@@ -69,8 +70,19 @@ Total_grant = grant_1 + grant_2
 
 st.write('Total Grant Amount ($):', Total_grant)
 
+data_2 = StringIO(data_2)
+df = pd.read_csv(data_2, sep='\t')
 
-df = pd.DataFrame(list(data_2.items()), columns=['Families Income Ceiling', 'CPF grant amount'])
+# Convert the 'CPF grant amount' column to numeric
+df['CPF grant amount'] = pd.to_numeric(df['CPF grant amount'])
 
-# Generate the bar chart
-st.bar_chart(df.set_index('Families Income Ceiling'))
+# Create the histogram
+st.title("CPF Grant Amount Histogram")
+plt.figure(figsize=(10, 6))
+plt.hist(df['CPF grant amount'], bins=10, color='blue', alpha=0.7)
+plt.title('Histogram of CPF Grant Amounts')
+plt.xlabel('CPF Grant Amount ($)')
+plt.ylabel('Frequency')
+
+# Display the histogram in Streamlit
+st.pyplot(plt)
