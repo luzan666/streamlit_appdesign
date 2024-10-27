@@ -69,10 +69,3 @@ Total_grant = grant_1 + grant_2
 
 st.write('Total Grant Amount ($):', Total_grant)
 
-
-# Convert the 'CPF grant amount' column to numeric
-df_2['CPF grant amount'] = pd.to_numeric(df['CPF grant amount'])
-
-# Create a histogram using Streamlit's built-in functionality
-st.title("CPF Grant Amount Histogram")
-st.bar_chart(df_2['CPF grant amount'])
