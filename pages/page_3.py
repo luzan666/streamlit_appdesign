@@ -12,7 +12,7 @@ First-timer SC-SPR couples,"70,000 ","40,000 ",
 First- and second-timer SC-SC couples,"40,000 ","25,000 ","""
 
 # Use StringIO to simulate a file-like object
-df = pd.read_csv(StringIO(data))
+df_1 = pd.read_csv(StringIO(data))
 
 # Select box from df_1 > household 
 household = st.selectbox('Household Type:', df_1['Household'])
@@ -51,7 +51,7 @@ data = """ Families Income Ceiling,CPF grant amount,
 "$8,501 to $9,000","5,000 ","""
 
 # Use StringIO to simulate a file-like object
-df = pd.read_csv(StringIO(data))
+df_2 = pd.read_csv(StringIO(data))
 
 # Select box from df_2 > income
 Income_ceiling = st.selectbox('Families Income Ceiling:', df_2['Families Income Ceiling'])
