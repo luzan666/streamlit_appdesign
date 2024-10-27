@@ -6,11 +6,12 @@ st.markdown("# Use_Case 2: CPF Grant Calculator")
 st.sidebar.markdown("# Use_Case 2: CPF Grant Calculator")
 
 st.markdown ('# CPF Housing Grant for Resale Flats (Families)')
-# Read the CSV file
-data ="""Household,2-to 4-room,5-room or bigger,
+data = """Household,2-to 4-room,5-room or bigger,
 First timer SC-SC couples,"80,000 ","50,000",
 First-timer SC-SPR couples,"70,000 ","40,000 ",
 First- and second-timer SC-SC couples,"40,000 ","25,000 ","""
+
+# Use StringIO to simulate a file-like object
 df = pd.read_csv(StringIO(data))
 
 # Select box from df_1 > household 
@@ -31,7 +32,7 @@ st.write('Grant Amount ($):', grant_1)
 
 st.markdown ('# Enhanced CPF Housing Grant (Families)')
 #Read the CSV file 
-data ="""Families Income Ceiling,CPF grant amount,
+data = """ Families Income Ceiling,CPF grant amount,
 "Not more than $1,500","120,000 ",
 "$1,501 to $2,000","110,000 ",
 "$2,001 to $2,500","105,000",
@@ -48,6 +49,8 @@ data ="""Families Income Ceiling,CPF grant amount,
 "$7,501 to $8,000","20,000 ",
 "$8,001 to $8,500","10,000 ",
 "$8,501 to $9,000","5,000 ","""
+
+# Use StringIO to simulate a file-like object
 df = pd.read_csv(StringIO(data))
 
 # Select box from df_2 > income
