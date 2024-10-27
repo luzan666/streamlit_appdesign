@@ -85,4 +85,4 @@ plt.xlabel('CPF Grant Amount ($)')
 plt.ylabel('Frequency')
 
 # Display the histogram in Streamlit
-st.pyplot(plt)
+st.pyplot(plt) 
