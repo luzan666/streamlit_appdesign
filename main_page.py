@@ -27,5 +27,3 @@ if password == PASSWORD:
     # Add your app content here
     # Example: Display a table, charts, etc.
     
-else:
-    st.error("Incorrect password. Please try again.")
