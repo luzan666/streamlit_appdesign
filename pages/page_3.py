@@ -68,3 +68,9 @@ st.write('Grant Amount($):' ,grant_2)
 Total_grant = grant_1 + grant_2 
 
 st.write('Total Grant Amount ($):', Total_grant)
+
+
+df = pd.DataFrame(list(data_2.items()), columns=['Families Income Ceiling', 'CPF grant amount'])
+
+# Generate the bar chart
+st.bar_chart(df.set_index('Families Income Ceiling'))
