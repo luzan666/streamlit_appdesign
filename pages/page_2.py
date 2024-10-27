@@ -60,12 +60,4 @@ price = df.loc[df['Town'] == town_option, room_option].values[0]
 # Display the result
 price
 
-
-# Create a DataFrame for charting
-chart_data = pd.DataFrame({
-    'Flat Type': room_options,
-    'Price': price
-})
-
-# Display the bar chart
-st.bar_chart(chart_data.set_index('Flat Type'))
+st.dataframe(data)
